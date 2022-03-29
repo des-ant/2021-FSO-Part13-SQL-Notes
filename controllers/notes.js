@@ -1,6 +1,8 @@
 const router = require('express').Router()
+const jwt = require('jsonwebtoken')
 
-const { Note } = require('../models')
+const { Note, User } = require('../models')
+const { SECRET } = require('../util/config')
 
 const tokenExtractor = (req, res, next) => {
   const authorization = req.get('authorization')
