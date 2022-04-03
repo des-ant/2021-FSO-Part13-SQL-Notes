@@ -4,7 +4,8 @@
   "description": "Notes Application from Part 13 of Full Stack open course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "migration:down": "node util/rollback.js"
   },
   "repository": {
     "type": "git",
