@@ -47,7 +47,16 @@ User.init({
       where: {
         disabled: true
       }
-    }
+    },
+    name(value) {
+      return {
+        where: {
+          name: {
+            [Op.iLike]: value
+          }
+        }
+      }
+    },
   }
 })
 
